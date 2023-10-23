@@ -1,0 +1,10 @@
+@(gameString: String)
+
+@main("Welcome to Play") {
+    <h1 class="center" id="demo">@for(txt <- gameString.split("\n")) {
+        @txt <br>
+    }
+    </h1>
+    }
+
+
