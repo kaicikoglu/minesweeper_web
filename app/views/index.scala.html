@@ -1,5 +1,35 @@
 @()
 
-    @main("Welcome to Play") {
-        <h1 class="center" id="demo">Minesweeper</h1>
+    @main("Minesweeper") {
+        <h1 style="text-align: center">About Minesweeper</h1>
+
+        <p>
+            Minesweeper is single-player logic-based computer game played on rectangular board <br>
+            whose object is to locate a predetermined number of randomly-placed "mines" in the<br>
+            shortest possible time by clicking on "safe" squares while avoiding the squares with mines.<br>
+            If the player clicks on a mine, the game ends.
+        </p>
+
+        <p>
+            The following Image shows a typical Minesweeper window <br>
+            <img src="@routes.Assets.versioned("images/Minesweeper_Field.png")" alt="Minesweeper" width="300" height="300">
+        </p>
+
+        <p>
+            The solution to this field is shown below. <br>
+            <img src="@routes.Assets.versioned("images/Minesweeper_Solved.png")" alt="Minesweeper" width="300" height="300">
+        </p>
+
+        <p>
+            The field if you lose is shown below. <br>
+            <img src="@routes.Assets.versioned("images/Minesweeper_Lost.png")" alt="Minesweeper" width="300" height="300">
+        </p>
+
+        <h1>Historic Background</h1>
+
+        <p>
+            The history of Minesweeper goes back to the early 80's when many 'mine' games were released for<br>
+            early home computers. The earliest proven digital ancestor of Minesweeper is Mined-Out,<br>
+            which was released for the Sinclair Spectrum in 1983.
+        </p>
     }

@@ -19,27 +19,27 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   val controller: ControllerInterface = injector.getInstance(classOf[ControllerInterface])
 
   def index(): Action[AnyContent] = Action {
-    implicit request: Request[AnyContent] =>
-      Ok(views.html.index())
+    Ok(views.html.index())
   }
 
   def createGame(difficulty: String): Action[AnyContent] = Action {
-    Ok(views.html.displayGame(controller.createNewField(difficulty).toString))
+    Ok(views.html.displayGame(controller.createNewField(difficulty)))
   }
 
   def revealValue(x: Integer, y: Integer): Action[AnyContent] = Action {
-    Ok(views.html.displayGame(controller.revealValue(new Coordinates(x, y)).toString))
+
+    Ok(views.html.displayGame(controller.revealValue(new Coordinates(x, y))))
   }
 
   def setFlag(x: Integer, y: Integer): Action[AnyContent] = Action {
-    Ok(views.html.displayGame(controller.setFlag(Coordinates(x, y, 'f')).toString))
+    Ok(views.html.displayGame(controller.setFlag(new Coordinates(x, y))))
   }
 
-  def undo(): Action[AnyContent] = Action{
-    Ok(views.html.displayGame(controller.undo.toString))
+  def undo(): Action[AnyContent] = Action {
+    Ok(views.html.displayGame(controller.undo))
   }
 
-  def redo(): Action[AnyContent] = Action{
-    Ok(views.html.displayGame(controller.redo.toString))
+  def redo(): Action[AnyContent] = Action {
+    Ok(views.html.displayGame(controller.redo))
   }
 }

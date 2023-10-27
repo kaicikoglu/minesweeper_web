@@ -1,10 +1,13 @@
-@(gameString: String)
+@(field: de.htwg.se.minesweeper.model.FieldComponent.FieldInterface)
 
 @main("Welcome to Play") {
-    <h1 class="center" id="demo">@for(txt <- gameString.split("\n")) {
-        @txt <br>
-    }
-    </h1>
-    }
+    <div class="gamecontainer" style="text-align: center">
+        <div class="minesweeperField">
+            <pre>
+            @field.toString
+            </pre>
+        </div>
+    </div>
+}
 
 

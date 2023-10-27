@@ -4,18 +4,18 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index()
+GET        /                              controllers.HomeController.index()
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET        /assets/*file                  controllers.Assets.versioned(path="/public", file: Asset)
 
 
-GET     /game/start/:difficulty          controllers.HomeController.createGame(difficulty: String)
+GET        /game/start/:difficulty        controllers.HomeController.createGame(difficulty: String)
 
-GET     /game/revealValue/:x/:y     controllers.HomeController.revealValue(x: Integer, y: Integer)
+GET        /game/revealValue/:x/:y        controllers.HomeController.revealValue(x: Integer, y: Integer)
 
-GET     /game/setFlag/:x/:y         controllers.HomeController.setFlag(x: Integer, y:Integer)
+GET        /game/setFlag/:x/:y            controllers.HomeController.setFlag(x: Integer, y:Integer)
 
-GET     /game/undo                   controllers.HomeController.undo()
+GET        /game/undo                     controllers.HomeController.undo()
 
-GET     /game/redo                   controllers.HomeController.redo()
+GET        /game/redo                     controllers.HomeController.redo()
