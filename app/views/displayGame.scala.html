@@ -1,13 +1,31 @@
-@(field: de.htwg.se.minesweeper.model.FieldComponent.FieldInterface)
+@(controller: de.htwg.se.minesweeper.controller.controllerComponent.ControllerInterface)
 
-@main("Welcome to Play") {
-    <div class="gamecontainer" style="text-align: center">
-        <div class="minesweeperField">
-            <pre>
-            @field.toString
-            </pre>
+    @main("") {
+
+        <div class="Minesweeper" style="text-align: center">
+            <div class="flags">
+                Flags left: @controller.flagsLeft() <br>
+            </div>
+            <div class="field">
+                <pre>@controller.field</pre>
+            </div>
         </div>
+    }
+
+<!--  <div class="gamecontainer">
+    <div class="game" align="center">
+    @for(row <- 0 until controller.field.rows) {
+        <div class="house size">
+        @for(col <- 0 until controller.field.cols) {
+            <span class="cell">
+                <span class="@{"number"}">
+                @{ {controller.getCell(row,col)._1}}
+                </span>
+
+            </span>
+        }
+        </div>
+        <div class="clear"></div>
+    }
     </div>
-}
-
-
+</div>-->

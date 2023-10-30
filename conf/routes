@@ -9,13 +9,13 @@ GET        /                              controllers.HomeController.index()
 # Map static resources from the /public folder to the /assets URL path
 GET        /assets/*file                  controllers.Assets.versioned(path="/public", file: Asset)
 
+GET        /game/easy                     controllers.HomeController.easy()
 
-GET        /game/start/:difficulty        controllers.HomeController.createGame(difficulty: String)
+GET        /game/hard                     controllers.HomeController.hard()
+
+GET        /game/extreme                  controllers.HomeController.extreme()
 
 GET        /game/revealValue/:x/:y        controllers.HomeController.revealValue(x: Integer, y: Integer)
 
 GET        /game/setFlag/:x/:y            controllers.HomeController.setFlag(x: Integer, y:Integer)
 
-GET        /game/undo                     controllers.HomeController.undo()
-
-GET        /game/redo                     controllers.HomeController.redo()
