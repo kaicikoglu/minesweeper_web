@@ -1,7 +1,9 @@
 @()
 
-    @main("Minesweeper") {
-        <h1 style="text-align: center">About Minesweeper</h1>
+@main("About") {
+    <div style="text-align: center">
+
+        <h1>About Minesweeper</h1>
 
         <p>
             Minesweeper is single-player logic-based computer game played on rectangular board <br>
@@ -32,4 +34,17 @@
             early home computers. The earliest proven digital ancestor of Minesweeper is Mined-Out,<br>
             which was released for the Sinclair Spectrum in 1983.
         </p>
-    }
+
+        <div class="start">
+            <p>
+                Try it out!
+            </p>
+            <button id="button" onclick="window.location.href='@routes.HomeController.easy()';" style="width:100px;height:25px;">Easy!</button>
+            <button id="button2" onclick="window.location.href='@routes.HomeController.hard()';" style="width:100px;height:25px;">Hard!</button>
+            <button id="button3" onclick="window.location.href='@routes.HomeController.extreme()';" style="width:100px;height:25px;">Extreme!</button>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+}
