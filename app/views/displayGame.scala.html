@@ -1,31 +1,78 @@
-@(controller: de.htwg.se.minesweeper.controller.controllerComponent.ControllerInterface)
+@import de.htwg.se.minesweeper.model.FieldComponent.FieldBaseImpl.Stone
+@(controller: de.htwg.se.minesweeper.controller.controllerComponent.ControllerInterface, gameSize: String)
 
-    @main("Game") {
-
-        <div class="Minesweeper" style="text-align: center">
-            <div class="flags">
-                Flags left: @controller.flagsLeft() <br>
-            </div>
-            <div class="field">
-                <pre>@controller.field</pre>
+@main("Minesweeper") {
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/" + gameSize + ".css")">
+    </head>
+    <body class="background">
+        <div>
+            <div>
+                <div class="flagcount-container">
+                    <div class="flagcount">Flags left: @controller.flagsLeft()</div>
+                </div>
+                @for(row <- 0 until controller.field.rows) {
+                    <div class="cell-container">
+                    @for(col <- 0 until controller.field.cols) {
+                        <div class="cell">
+                            @if(controller.getCell(row, col)._1 == Stone.EmptyTracked) {
+                                <div class="empty-cell"></div>
+                            }
+                            @if(controller.getCell(row, col)._1 == Stone.One) {
+                                <div class="number-1">@{
+                                    controller.getCell(row, col)._1
+                                }</div>
+                            }
+                            @if(controller.getCell(row, col)._1 == Stone.Two) {
+                                <div class="number-2">@{
+                                    controller.getCell(row, col)._1
+                                }</div>
+                            }
+                            @if(controller.getCell(row, col)._1 == Stone.Three) {
+                                <div class="number-3">@{
+                                    controller.getCell(row, col)._1
+                                }</div>
+                            }
+                            @if(controller.getCell(row, col)._1 == Stone.Four) {
+                                <div class="number-4">@{
+                                    controller.getCell(row, col)._1
+                                }</div>
+                            }
+                            @if(controller.getCell(row, col)._1 == Stone.Five) {
+                                <div class="number-5">@{
+                                    controller.getCell(row, col)._1
+                                }</div>
+                            }
+                            @if(controller.getCell(row, col)._1 == Stone.Six) {
+                                <div class="number-6">@{
+                                    controller.getCell(row, col)._1
+                                }</div>
+                            }
+                            @if(controller.getCell(row, col)._1 == Stone.Seven) {
+                                <div class="number-7">@{
+                                    controller.getCell(row, col)._1
+                                }</div>
+                            }
+                            @if(controller.getCell(row, col)._1 == Stone.Eight) {
+                                <div class="number-8">@{
+                                    controller.getCell(row, col)._1
+                                }</div>
+                            }
+                            @if(controller.getCell(row, col)._1 == Stone.Bomb) {
+                                <div class="bomb">@{
+                                    controller.getCell(row, col)._1
+                                }</div>
+                            }
+                            @if(controller.getCell(row, col)._1 == Stone.NotTracked) {
+                                <button class="button" onclick="location.href = '@routes.HomeController.revealValue(row, col)'"></button>
+                            }
+                        </div>
+                    }
+                    </div>
+                }
+                <div class="clear"></div>
             </div>
         </div>
-    }
-
-<!--  <div class="gamecontainer">
-    <div class="game" align="center">
-    @for(row <- 0 until controller.field.rows) {
-        <div class="house size">
-        @for(col <- 0 until controller.field.cols) {
-            <span class="cell">
-                <span class="@{"number"}">
-                @{ {controller.getCell(row,col)._1}}
-                </span>
-
-            </span>
-        }
-        </div>
-        <div class="clear"></div>
-    }
-    </div>
-</div>-->
+    </body>
+}

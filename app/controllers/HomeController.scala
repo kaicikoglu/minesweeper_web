@@ -21,6 +21,8 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   private val injector = Guice.createInjector(new MinesweeperModuleEasy)
   var controller: ControllerInterface = injector.getInstance(classOf[ControllerInterface])
 
+  var size = ""
+
   def index(): Action[AnyContent] = Action {
     Ok(views.html.index())
   }
@@ -28,28 +30,31 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   def easy(): Action[AnyContent] = Action {
     controller = Controller(DifficultyFactory("1").run)
     controller.setBombs(controller.calculateBombAmount())
-    Ok(views.html.displayGame(controller))
+    size = "easy"
+    Ok(views.html.displayGame(controller, size))
   }
 
   def hard(): Action[AnyContent] = Action {
     controller = Controller(DifficultyFactory("2").run)
     controller.setBombs(controller.calculateBombAmount())
-    Ok(views.html.displayGame(controller))
+    size = "hard"
+    Ok(views.html.displayGame(controller, size))
   }
 
   def extreme(): Action[AnyContent] = Action {
     controller = Controller(DifficultyFactory("3").run)
     controller.setBombs(controller.calculateBombAmount())
-    Ok(views.html.displayGame(controller))
+    size = "extreme"
+    Ok(views.html.displayGame(controller, size))
   }
 
   def revealValue(x: Integer, y: Integer): Action[AnyContent] = Action {
     controller.doAndPublish(controller.revealValue(new Coordinates(x, y)))
-    Ok(views.html.displayGame(controller))
+    Ok(views.html.displayGame(controller, size))
   }
 
   def setFlag(x: Integer, y: Integer): Action[AnyContent] = Action {
     controller.doAndPublish(controller.setFlag(new Coordinates(x, y)))
-    Ok(views.html.displayGame(controller))
+    Ok(views.html.displayGame(controller, size))
   }
 }

@@ -1,0 +1,200 @@
+/* Style the container */
+
+.background{
+    background: #222;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    border: 0; /* Remove the border */
+    padding: 0; /* Remove padding */
+    background: none; /* Remove background */
+    cursor: pointer; /* Change the cursor to a pointer on hover (optional) */
+    width: 75px; /* Set the width to match the cell size */
+    height: 75px; /* Set the height to match the cell size */
+    /* Add any additional styles as needed */
+}
+
+.flagcount-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Horizontally center the cells */
+    align-items: center; /* Vertically center the cells */
+    margin-bottom: 10px;
+}
+
+.flagcount {
+    background-color: #222; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 5px 10px; /* Padding to provide some spacing */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    font-size: 18px; /* Font size */
+    display: inline-block; /* Display as inline-block for better alignment */
+}
+
+.cell-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Horizontally center the cells */
+    align-items: center; /* Vertically center the cells */
+}
+
+/* Define the cell styles */
+.cell {
+    width: 75px;
+    height: 75px;
+    font-family: "Courier New", monospace;
+    background-color: #969595; /* Light gray background */
+    border: 1px solid #444444; /* Gray border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333; /* Dark gray text color */
+}
+
+/* Overridden cell styles for empty cells */
+.empty-cell {
+    width: 75px;
+    height: 75px;
+    background-color: #f0f0f0; /* White background for empty cells */
+    border: 1px solid #232222; /* Light gray border for empty cells */
+    font-size: 16px; /* Adjusted font size for empty cells */
+    color: #888; /* Gray text color for empty cells */
+    /* You can customize other properties here */
+}
+
+.number-1 {
+    width: 75px;
+    height: 75px;
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* White background for empty cells */
+    border: 1px solid #232222; /* Light gray border for empty cells */
+    font-size: 42px; /* Adjusted font size for empty cells */
+    font-weight: bold; /* Bold font for emphasis */
+    display: flex; /* Use flex layout to center text both horizontally and vertically */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    color: blue;
+}
+
+/* Number 2 styles */
+.number-2 {
+    color: #008000; /* Green text color for '2' */
+    width: 75px;
+    height: 75px;
+    background-color: #f0f0f0; /* White background for empty cells */
+    border: 1px solid #232222; /* Light gray border for empty cells */
+    font-size: 42px; /* Adjusted font size for empty cells */
+    font-weight: bold; /* Bold font for emphasis */
+    display: flex; /* Use flex layout to center text both horizontally and vertically */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+/* Number 3 styles */
+.number-3 {
+    color: #FF0000; /* Red text color for '3' */
+    width: 75px;
+    height: 75px;
+    background-color: #f0f0f0; /* White background for empty cells */
+    border: 1px solid #232222; /* Light gray border for empty cells */
+    font-size: 42px; /* Adjusted font size for empty cells */
+    font-weight: bold; /* Bold font for emphasis */
+    display: flex; /* Use flex layout to center text both horizontally and vertically */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+/* Number 4 styles */
+.number-4 {
+    color: #000080; /* Dark blue text color for '4' */
+    width: 75px;
+    height: 75px;
+    background-color: #f0f0f0; /* White background for empty cells */
+    border: 1px solid #232222; /* Light gray border for empty cells */
+    font-size: 42px; /* Adjusted font size for empty cells */
+    font-weight: bold; /* Bold font for emphasis */
+    display: flex; /* Use flex layout to center text both horizontally and vertically */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+/* Number 5 styles */
+.number-5 {
+    color: #800000; /* Dark red text color for '5' */
+    width: 75px;
+    height: 75px;
+    background-color: #f0f0f0; /* White background for empty cells */
+    border: 1px solid #232222; /* Light gray border for empty cells */
+    font-size: 42px; /* Adjusted font size for empty cells */
+    font-weight: bold; /* Bold font for emphasis */
+    display: flex; /* Use flex layout to center text both horizontally and vertically */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+/* Number 6 styles */
+.number-6 {
+    color: #008080; /* Teal text color for '6' */
+    width: 75px;
+    height: 75px;
+    background-color: #f0f0f0; /* White background for empty cells */
+    border: 1px solid #232222; /* Light gray border for empty cells */
+    font-size: 42px; /* Adjusted font size for empty cells */
+    font-weight: bold; /* Bold font for emphasis */
+    display: flex; /* Use flex layout to center text both horizontally and vertically */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+/* Number 7 styles */
+.number-7 {
+    color: pink; /* Black text color for '7' */
+    width: 75px;
+    height: 75px;
+    background-color: #f0f0f0; /* White background for empty cells */
+    border: 1px solid #232222; /* Light gray border for empty cells */
+    font-size: 42px; /* Adjusted font size for empty cells */
+    font-weight: bold; /* Bold font for emphasis */
+    display: flex; /* Use flex layout to center text both horizontally and vertically */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+/* Number 8 styles */
+.number-8 {
+    color: deeppink; /* Gray text color for '8' */
+    width: 75px;
+    height: 75px;
+    background-color: #f0f0f0; /* White background for empty cells */
+    border: 1px solid #232222; /* Light gray border for empty cells */
+    font-size: 42px; /* Adjusted font size for empty cells */
+    font-weight: bold; /* Bold font for emphasis */
+    display: flex; /* Use flex layout to center text both horizontally and vertically */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+.bomb {
+    background-color: #d9534f; /* Red background color */
+    color: #fff; /* White text color */
+    font-size: 24px; /* Font size for the bomb icon */
+    text-align: center; /* Center-align content */
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+    border: 1px solid #ccc; /* Light gray border */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    display: flex; /* Use flex layout to center text both horizontally and vertically */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    background-image: url("/images/gameIcons/iconsEasy/bomb.png"); /* Replace 'bomb-icon.png' with your bomb icon image */
+    background-size: 100%; /* Make sure the image covers the entire cell */
+}
+
