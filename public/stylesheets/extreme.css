@@ -76,6 +76,12 @@
 
 .bomb {
     font-size: 13px; /* Font size for the bomb icon */
-    width: 13px; /* Adjust width as needed */
-    height: 13px; /* Adjust height as needed */
+    width: 25px; /* Adjust width as needed */
+    height: 25px; /* Adjust height as needed */
+}
+
+.flagged {
+    font-size: 13px; /* Font size for the bomb icon */
+    width: 25px; /* Adjust width as needed */
+    height: 25px; /* Adjust height as needed */
 }
