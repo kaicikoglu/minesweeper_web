@@ -1,13 +1,22 @@
 @import de.htwg.se.minesweeper.model.FieldComponent.FieldBaseImpl.Stone
-@import de.htwg.se.minesweeper.model.FieldComponent.FieldBaseImpl.Coordinates
 @(controller: de.htwg.se.minesweeper.controller.controllerComponent.ControllerInterface, gameSize: String)
 
 @main("Minesweeper") {
     <head>
         <title></title>
         <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/" + gameSize + ".css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/menubar.css")">
     </head>
     <body class="background">
+        <div class="navbar">
+            <a href="@routes.HomeController.easy()">Easy</a>
+            <a href="@routes.HomeController.hard()">Hard</a>
+            <a href="@routes.HomeController.extreme()">Extreme</a>
+            <div class="navbar-right">
+                <a href="@routes.HomeController.load()">Load</a>
+                <a href="@routes.HomeController.save()">Save</a>
+            </div>
+        </div>
         <div>
             <div>
                 <div class="flagcount-container">

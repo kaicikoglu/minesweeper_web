@@ -57,4 +57,14 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     controller.doAndPublish(controller.setFlag(new Coordinates(x, y)))
     Ok(views.html.displayGame(controller, size))
   }
+
+  def load(): Action[AnyContent] = Action {
+    controller.doAndPublish(controller.load)
+    Ok(views.html.displayGame(controller, size))
+  }
+
+  def save(): Action[AnyContent] = Action {
+    controller.doAndPublish(controller.save)
+    Ok(views.html.displayGame(controller, size))
+  }
 }

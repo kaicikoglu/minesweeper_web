@@ -1,10 +1,10 @@
-.background{
-    background: #6c5f5b;
-    margin: 0;
-}
-
 a {
     text-decoration: none;
+}
+
+.background {
+    background: #6c5f5b;
+    margin: 0;
 }
 
 .button {
@@ -25,7 +25,7 @@ a {
 }
 
 .flagcount {
-    background-color: #393e46;
+    background-color: #333;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
@@ -42,8 +42,8 @@ a {
 }
 
 .cell {
-    width: 75px;
-    height: 75px;
+    width: calc(10vh - 10px);
+    height: calc(10vh - 10px);
     font-family: "Courier New", monospace;
     background-color: #4f4a45;
     border: 1px solid #000000;
@@ -51,136 +51,118 @@ a {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 18px;
+    font-size: calc(7vh - 10px);
     color: #333;
     margin: 2px;
 }
 
+.cell:hover {
+    background: #f5b68b;
+}
+
 .empty-cell {
-    width: 75px;
-    height: 75px;
+    width: calc(10vh - 10px);
+    height: calc(10vh - 10px);
     background-color: #f6f1ee;
-    font-size: 16px;
     color: #888;
 }
 
 .number-1 {
-    width: 75px;
-    height: 75px;
-    box-sizing: border-box;
+    width: calc(10vh - 10px);
+    height: calc(10vh - 10px);
+    color: blue;
     background-color: #f6f1ee;
-    font-size: 42px;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: blue;
 }
 
 .number-2 {
+    width: calc(10vh - 10px);
+    height: calc(10vh - 10px);
     color: #008000;
-    width: 75px;
-    height: 75px;
     background-color: #f6f1ee;
-    font-size: 42px;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .number-3 {
+    width: calc(10vh - 10px);
+    height: calc(10vh - 10px);
     color: #FF0000;
-    width: 75px;
-    height: 75px;
     background-color: #f6f1ee;
-    font-size: 42px;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .number-4 {
+    width: calc(10vh - 10px);
+    height: calc(10vh - 10px);
     color: #000080;
-    width: 75px;
-    height: 75px;
     background-color: #f6f1ee;
-    font-size: 42px;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .number-5 {
+    width: calc(10vh - 10px);
+    height: calc(10vh - 10px);
     color: #800000;
-    width: 75px;
-    height: 75px;
     background-color: #f6f1ee;
-    font-size: 42px;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .number-6 {
+    width: calc(10vh - 10px);
+    height: calc(10vh - 10px);
     color: #008080;
-    width: 75px;
-    height: 75px;
     background-color: #f6f1ee;
-    font-size: 42px;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .number-7 {
+    width: calc(10vh - 10px);
+    height: calc(10vh - 10px);
     color: pink;
-    width: 75px;
-    height: 75px;
     background-color: #f6f1ee;
-    font-size: 42px;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .number-8 {
+    width: calc(10vh - 10px);
+    height: calc(10vh - 10px);
     color: deeppink;
-    width: 75px;
-    height: 75px;
     background-color: #f6f1ee;
-    font-size: 42px;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .bomb {
+    width: calc(10vh - 10px);
+    height: calc(10vh - 10px);
     background-color: #ed7d31;
     color: #fff;
-    font-size: 42px;
     text-align: center;
-    width: 75px;
-    height: 75px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/images/gameIcons/iconsEasy/bomb.png");
 }
 
 .flagged {
-    width: 75px;
-    height: 75px;
-    font-size: 42px;
+    width: calc(10vh - 10px);
+    height: calc(10vh - 10px);
     color: #ed7d31;
-    background-image: url("/images/gameIcons/iconsEasy/flag_icon.png");
     display: flex;
     justify-content: center;
     align-items: center;

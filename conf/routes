@@ -19,3 +19,7 @@ GET        /game/revealValue/:x/:y        controllers.HomeController.revealValue
 
 GET        /game/setFlag/:x/:y            controllers.HomeController.setFlag(x: Integer, y:Integer)
 
+GET        /game/load                     controllers.HomeController.load()
+
+GET        /game/save                     controllers.HomeController.save()
+

@@ -1,87 +1,69 @@
 @import "easy.css";
 
 .button {
-    width: 25px; /* Set the width to match the cell size */
-    height: 25px; /* Set the height to match the cell size */
-    /* Add any additional styles as needed */
+    width: 25px;
+    height: 25px;
 }
 
-/* Define the cell styles */
 .cell {
-    width: 25px;
-    height: 25px;
+    width: calc(4vh - 10px);
+    height: calc(4vh - 10px);
+    font-size: calc(4vh - 10px);
+    margin: 1px;
 }
 
-/* Overridden cell styles for empty cells */
 .empty-cell {
-    width: 25px;
-    height: 25px;
+    width: calc(4vh - 10px);
+    height: calc(4vh - 10px);
 }
 
 .number-1 {
-    width: 25px;
-    height: 25px;
-    font-size: 13px; /* Adjusted font size for empty cells */
+    width: calc(4vh - 10px);
+    height: calc(4vh - 10px);
 }
 
-/* Number 2 styles */
 .number-2 {
-    color: #008000; /* Green text color for '2' */
-    width: 25px;
-    height: 25px;
-    font-size: 13px; /* Adjusted font size for empty cells */
+    color: #008000;
+    width: calc(4vh - 10px);
+    height: calc(4vh - 10px);
 }
 
-/* Number 3 styles */
 .number-3 {
-    width: 25px;
-    height: 25px;
-    font-size: 13px; /* Adjusted font size for empty cells */
+    width: calc(4vh - 10px);
+    height: calc(4vh - 10px);
 }
 
-/* Number 4 styles */
 .number-4 {
-    width: 25px;
-    height: 25px;
-    font-size: 13px; /* Adjusted font size for empty cells */
+    width: calc(4vh - 10px);
+    height: calc(4vh - 10px);
 }
 
-/* Number 5 styles */
 .number-5 {
-    width: 25px;
-    height: 25px;
-    font-size: 13px; /* Adjusted font size for empty cells */
+    width: calc(4vh - 10px);
+    height: calc(4vh - 10px);
 }
 
-/* Number 6 styles */
 .number-6 {
-    width: 25px;
-    height: 25px;
-    font-size: 13px; /* Adjusted font size for empty cells */
+    width: calc(4vh - 10px);
+    height: calc(4vh - 10px);
 }
 
-/* Number 7 styles */
 .number-7 {
-    width: 25px;
-    height: 25px;
-    font-size: 13px; /* Adjusted font size for empty cells */
+    width: calc(4vh - 10px);
+    height: calc(4vh - 10px);
 }
 
-/* Number 8 styles */
 .number-8 {
-    width: 25px;
-    height: 25px;
-    font-size: 13px; /* Adjusted font size for empty cells */
+    width: calc(4vh - 10px);
+    height: calc(4vh - 10px);
 }
 
 .bomb {
-    font-size: 13px; /* Font size for the bomb icon */
-    width: 25px; /* Adjust width as needed */
-    height: 25px; /* Adjust height as needed */
+    width: calc(4vh - 10px);
+    height: calc(4vh - 10px);
 }
 
 .flagged {
-    font-size: 13px; /* Font size for the bomb icon */
-    width: 25px; /* Adjust width as needed */
-    height: 25px; /* Adjust height as needed */
+    width: calc(4vh - 10px);
+    height: calc(4vh - 10px);
 }
