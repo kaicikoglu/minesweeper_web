@@ -60,6 +60,13 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
 
   def load(): Action[AnyContent] = Action {
     controller.doAndPublish(controller.load)
+    if (controller.field.rows == 8) {
+      size = "easy"
+    } else if (controller.field.rows == 16) {
+      size = "hard"
+    } else if (controller.field.rows == 24) {
+      size = "extreme"
+    }
     Ok(views.html.displayGame(controller, size))
   }
 
