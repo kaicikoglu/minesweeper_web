@@ -1,50 +1,98 @@
 @()
 
-@main("About") {
-    <div style="text-align: center">
+    @main("About") {
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/about.css")">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <title>About Us</title>
+        </head>
+        <body class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Minesweeper Web App</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heritage">Heritage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#rules">Rules</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pictures">Pictures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#play">How to Play</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#try">Try it out!</a>
+                            </li>
 
-        <h1>About Minesweeper</h1>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <br>
+            <section id="heritage" class="container mt-5">
+                <h2 class="text-center mb-4">Heritage of Minesweeper</h2>
+                <p>
+                    Minesweeper is a classic single-player puzzle game that originated in the 1960s. It gained widespread popularity after being bundled with Microsoft Windows operating systems starting from Windows 3.1. The game's simplicity and addictive nature have made it a timeless classic enjoyed by millions around the world.
+                </p>
+                <p>
+                    The objective of Minesweeper is to clear a rectangular board containing hidden mines without detonating any of them. The game requires logical thinking and strategic decision-making to reveal safe squares and avoid the mines.
+                </p>
+            </section>
+            <section id="rules" class="container mt-5">
+                <h2 class="text-center mb-4">Rules of Minesweeper</h2>
+                <p>
+                    The rules of Minesweeper are straightforward:
+                </p>
+                <ul>
+                    <li>The game is played on a grid of squares, some of which contain hidden mines.</li>
+                    <li>Players click on squares to reveal what is underneath. If a mine is revealed, the game ends.</li>
+                    <li>Numbers on revealed squares indicate how many mines are adjacent to that square.</li>
+                    <li>Using the numbers as clues, players must deduce the locations of mines and flag them to avoid detonation.</li>
+                    <li>The game is won when all non-mine squares are revealed.</li>
+                </ul>
+            </section>
+            <section id="pictures" class="container mt5">
+                <h2 class="text-center mb-4">Pictures</h2>
+                <div class="pictures">
+                    <img src="@routes.Assets.versioned("images/Minesweeper_Field.png")" alt="">
+                    <img src="@routes.Assets.versioned("images/Minesweeper_Lost.png")" alt="">
+                    <img src="@routes.Assets.versioned("images/Minesweeper_Solved.png")" alt="">
+                </div>
 
-        <p>
-            Minesweeper is single-player logic-based computer game played on rectangular board <br>
-            whose object is to locate a predetermined number of randomly-placed "mines" in the<br>
-            shortest possible time.<br>
-            If the player clicks on a mine, the game ends.
-        </p>
+            </section>
+            <section id="play" class="container mt-5">
+                <h2 class="text-center mb-4">How to Play Minesweeper</h2>
+                <p>
+                    Playing Minesweeper is easy! Here's a simple guide to get you started:
+                </p>
+                <ol>
+                    <li>Left-click on a square to reveal what's underneath.</li>
+                    <li>Use the numbers to deduce the location of mines.</li>
+                    <li>Right-click on a square to flag it as a potential mine.</li>
+                    <li>Avoid clicking on mines to keep the game going.</li>
+                    <li>Win the game by revealing all safe squares!</li>
+                </ol>
+            </section>
+            <section id="try">
+                <h2 class="text-center mb-4">Try it out!</h2>
+                <div class="button">
+                    <button onclick="location.href='@routes.HomeController.easy()'">Easy</button>
+                    <button onclick="location.href='@routes.HomeController.hard()'">Hard</button>
+                    <button onclick="location.href='@routes.HomeController.extreme()'">Extreme</button>
+                </div>
+            </section>
 
-        <p>
-            The following Image shows a typical Minesweeper window <br>
-            <img src="@routes.Assets.versioned("images/Minesweeper_Field.png")" alt="Minesweeper" width="300" height="300">
-        </p>
+                <!-- Bootstrap JavaScript (optional) -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-        <p>
-            The solution to this field is shown below. <br>
-            <img src="@routes.Assets.versioned("images/Minesweeper_Solved.png")" alt="Minesweeper" width="300" height="300">
-        </p>
-
-        <p>
-            The field if you lose is shown below. <br>
-            <img src="@routes.Assets.versioned("images/Minesweeper_Lost.png")" alt="Minesweeper" width="300" height="300">
-        </p>
-
-        <h1>Historic Background</h1>
-
-        <p>
-            The history of Minesweeper goes back to the early 80's when many 'mine' games were released for<br>
-            early home computers. The earliest proven digital ancestor of Minesweeper is Mined-Out,<br>
-            which was released for the Sinclair Spectrum in 1983.
-        </p>
-
-        <div class="start">
-            <p>
-                Try it out!
-            </p>
-            <button id="button" onclick="window.location.href='@routes.HomeController.easy()';" style="width:100px;height:25px;">Easy!</button>
-            <button id="button2" onclick="window.location.href='@routes.HomeController.hard()';" style="width:100px;height:25px;">Hard!</button>
-            <button id="button3" onclick="window.location.href='@routes.HomeController.extreme()';" style="width:100px;height:25px;">Extreme!</button>
-        </div>
-        <br>
-        <br>
-        <br>
-    </div>
-}
+        </body>
+    }

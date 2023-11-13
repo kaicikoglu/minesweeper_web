@@ -5,65 +5,227 @@
     height: 25px;
 }
 
-.cell {
-    width: calc(4vh - 10px);
-    height: calc(4vh - 10px);
-    font-size: calc(4vh - 10px);
-    margin: 1px;
+@media (min-width: 600px) {
+    .cell {
+        width: calc(4vw - 8px);
+        height: calc(4vw - 8px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .empty-cell {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(5vw - 10px);
+    }
+
+    .number-1 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .number-2 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .number-3 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .number-4 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .number-5 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .number-6 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .number-7 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .number-8 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .bomb {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+
+    }
+
+    .flagged {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
 }
 
-.empty-cell {
-    width: calc(4vh - 10px);
-    height: calc(4vh - 10px);
+@media (max-width: 600px) {
+    .cell {
+        width: calc(4vw - 8px);
+        height: calc(4vw - 8px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .empty-cell {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(5vw - 10px);
+    }
+
+    .number-1 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .number-2 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .number-3 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .number-4 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .number-5 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .number-6 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .number-7 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .number-8 {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
+
+    .bomb {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+
+    }
+
+    .flagged {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(3vw - 10px);
+    }
 }
 
-.number-1 {
-    width: calc(4vh - 10px);
-    height: calc(4vh - 10px);
-}
+@media (min-width: 992px) {
+    .cell {
+        width: calc(4vh - 8px);
+        height: calc(4vh - 8px);
+        font-size: calc(3vh - 10px);
+    }
 
-.number-2 {
-    color: #008000;
-    width: calc(4vh - 10px);
-    height: calc(4vh - 10px);
-}
+    .empty-cell {
+        width: calc(4vh - 10px);
+        height: calc(4vh - 10px);
+        font-size: calc(5vh - 10px);
+    }
 
-.number-3 {
-    width: calc(4vh - 10px);
-    height: calc(4vh - 10px);
-}
+    .number-1 {
+        width: calc(4vh - 10px);
+        height: calc(4vh - 10px);
+        font-size: calc(3vh - 10px);
+    }
 
-.number-4 {
-    width: calc(4vh - 10px);
-    height: calc(4vh - 10px);
-}
+    .number-2 {
+        width: calc(4vh - 10px);
+        height: calc(4vh - 10px);
+        font-size: calc(3vh - 10px);
+    }
 
-.number-5 {
-    width: calc(4vh - 10px);
-    height: calc(4vh - 10px);
-}
+    .number-3 {
+        width: calc(4vh - 10px);
+        height: calc(4vh - 10px);
+        font-size: calc(3vh - 10px);
+    }
 
-.number-6 {
-    width: calc(4vh - 10px);
-    height: calc(4vh - 10px);
-}
+    .number-4 {
+        width: calc(4vh - 10px);
+        height: calc(4vh - 10px);
+        font-size: calc(3vh - 10px);
+    }
 
-.number-7 {
-    width: calc(4vh - 10px);
-    height: calc(4vh - 10px);
-}
+    .number-5 {
+        width: calc(4vh - 10px);
+        height: calc(4vh - 10px);
+        font-size: calc(3vh - 10px);
+    }
 
-.number-8 {
-    width: calc(4vh - 10px);
-    height: calc(4vh - 10px);
-}
+    .number-6 {
+        width: calc(4vh - 10px);
+        height: calc(4vh - 10px);
+        font-size: calc(3vh - 10px);
+    }
 
-.bomb {
-    width: calc(4vh - 10px);
-    height: calc(4vh - 10px);
-}
+    .number-7 {
+        width: calc(4vh - 10px);
+        height: calc(4vh - 10px);
+        font-size: calc(3vh - 10px);
+    }
 
-.flagged {
-    width: calc(4vh - 10px);
-    height: calc(4vh - 10px);
+    .number-8 {
+        width: calc(4vh - 10px);
+        height: calc(4vh - 10px);
+        font-size: calc(3vh - 10px);
+    }
+
+    .bomb {
+        width: calc(4vh - 10px);
+        height: calc(4vh - 10px);
+        font-size: calc(3vh - 10px);
+
+    }
+
+    .flagged {
+        width: calc(4vh - 10px);
+        height: calc(4vh - 10px);
+        font-size: calc(3vh - 10px);
+    }
 }

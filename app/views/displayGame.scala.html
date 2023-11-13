@@ -4,90 +4,116 @@
 @main("Minesweeper") {
     <head>
         <title></title>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; style-src 'self' https://maxcdn.bootstrapcdn.com/bootstrap/">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/" + gameSize + ".css")">
         <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/menubar.css")">
     </head>
-    <body class="background">
-        <div class="navbar">
-            <a href="@routes.HomeController.easy()">Easy</a>
-            <a href="@routes.HomeController.hard()">Hard</a>
-            <a href="@routes.HomeController.extreme()">Extreme</a>
-            <div class="navbar-right">
-                <a href="@routes.HomeController.load()">Load</a>
-                <a href="@routes.HomeController.save()">Save</a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark menu-bar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="@routes.HomeController.index()">Minesweeper</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@routes.HomeController.easy()">Easy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@routes.HomeController.hard()">Hard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@routes.HomeController.extreme()">Extreme</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@routes.HomeController.save()">Save</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@routes.HomeController.load()">Load</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
+
+    <body class="background">
         <div>
             <div>
                 <div class="flagcount-container">
                     <div class="flagcount">Flags left: @controller.flagsLeft()</div>
                 </div>
+                <div class="game-container">
                 @for(row <- 0 until controller.field.rows) {
                     <div class="cell-container">
                     @for(col <- 0 until controller.field.cols) {
                         <div class="cell">
                             @if(controller.getCell(row, col)._1 == Stone.EmptyTracked) {
-                                <div class="empty-cell"></div>
+                                <div id="@row-@col" class="empty-cell"></div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.One) {
-                                <div class="number-1">@{
+                                <div id="@row-@col" class="number-1">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Two) {
-                                <div class="number-2">@{
+                                <div id="@row-@col" class="number-2">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Three) {
-                                <div class="number-3">@{
+                                <div id="@row-@col" class="number-3">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Four) {
-                                <div class="number-4">@{
+                                <div id="@row-@col" class="number-4">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Five) {
-                                <div class="number-5">@{
+                                <div id="@row-@col" class="number-5">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Six) {
-                                <div class="number-6">@{
+                                <div id="@row-@col" class="number-6">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Seven) {
-                                <div class="number-7">@{
+                                <div id="@row-@col" class="number-7">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Eight) {
-                                <div class="number-8">@{
+                                <div id="@row-@col" class="number-8">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Bomb) {
-                                <div class="bomb">@{
+                                <div id="@row-@col" class="bomb">@{
                                     "\uD83D\uDCA3"
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Flag) {
-                                <div class="flagged">@{
+                                <div id="@row-@col" class="flagged">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.NotTracked) {
-                                <button class="button" onclick="location.href = '@routes.HomeController.revealValue(row, col)'"></button>
+                                <button id="@row-@col" class="button" onclick="location.href = '@routes.HomeController.revealValue(row, col)'"></button>
                             }
                         </div>
                     }
                     </div>
                 }
+                </div>
+
                 <div class="clear"></div>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
 }
