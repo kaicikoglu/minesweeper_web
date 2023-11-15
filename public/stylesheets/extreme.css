@@ -9,73 +9,21 @@
     .cell {
         width: calc(4vw - 8px);
         height: calc(4vw - 8px);
+        border-radius: 6px;
+    }
+
+    .cell-type {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(4vw - 10px);
+        border-radius: 5px;
+    }
+
+    .bomb{
         font-size: calc(3vw - 10px);
     }
 
-    .empty-cell {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(5vw - 10px);
-    }
-
-    .number-1 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .number-2 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .number-3 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .number-4 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .number-5 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .number-6 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .number-7 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .number-8 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .bomb {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-
-    }
-
-    .flagged {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
+    .flagged{
         font-size: calc(3vw - 10px);
     }
 }
@@ -84,73 +32,21 @@
     .cell {
         width: calc(4vw - 8px);
         height: calc(4vw - 8px);
+        border-radius: 6px;
+    }
+
+    .cell-type {
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(4vw - 10px);
+        border-radius: 5px;
+    }
+
+    .bomb{
         font-size: calc(3vw - 10px);
     }
 
-    .empty-cell {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(5vw - 10px);
-    }
-
-    .number-1 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .number-2 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .number-3 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .number-4 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .number-5 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .number-6 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .number-7 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .number-8 {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-    }
-
-    .bomb {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
-        font-size: calc(3vw - 10px);
-
-    }
-
-    .flagged {
-        width: calc(4vw - 10px);
-        height: calc(4vw - 10px);
+    .flagged{
         font-size: calc(3vw - 10px);
     }
 }
@@ -159,73 +55,21 @@
     .cell {
         width: calc(4vh - 8px);
         height: calc(4vh - 8px);
+        border-radius: 6px;
+    }
+
+    .cell-type {
+        width: calc(4vh - 10px);
+        height: calc(4vh - 10px);
+        font-size: calc(4vh - 10px);
+        border-radius: 5px;
+    }
+
+    .bomb{
         font-size: calc(3vh - 10px);
     }
 
-    .empty-cell {
-        width: calc(4vh - 10px);
-        height: calc(4vh - 10px);
-        font-size: calc(5vh - 10px);
-    }
-
-    .number-1 {
-        width: calc(4vh - 10px);
-        height: calc(4vh - 10px);
-        font-size: calc(3vh - 10px);
-    }
-
-    .number-2 {
-        width: calc(4vh - 10px);
-        height: calc(4vh - 10px);
-        font-size: calc(3vh - 10px);
-    }
-
-    .number-3 {
-        width: calc(4vh - 10px);
-        height: calc(4vh - 10px);
-        font-size: calc(3vh - 10px);
-    }
-
-    .number-4 {
-        width: calc(4vh - 10px);
-        height: calc(4vh - 10px);
-        font-size: calc(3vh - 10px);
-    }
-
-    .number-5 {
-        width: calc(4vh - 10px);
-        height: calc(4vh - 10px);
-        font-size: calc(3vh - 10px);
-    }
-
-    .number-6 {
-        width: calc(4vh - 10px);
-        height: calc(4vh - 10px);
-        font-size: calc(3vh - 10px);
-    }
-
-    .number-7 {
-        width: calc(4vh - 10px);
-        height: calc(4vh - 10px);
-        font-size: calc(3vh - 10px);
-    }
-
-    .number-8 {
-        width: calc(4vh - 10px);
-        height: calc(4vh - 10px);
-        font-size: calc(3vh - 10px);
-    }
-
-    .bomb {
-        width: calc(4vh - 10px);
-        height: calc(4vh - 10px);
-        font-size: calc(3vh - 10px);
-
-    }
-
-    .flagged {
-        width: calc(4vh - 10px);
-        height: calc(4vh - 10px);
+    .flagged{
         font-size: calc(3vh - 10px);
     }
 }

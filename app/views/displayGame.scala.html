@@ -50,50 +50,50 @@
                     @for(col <- 0 until controller.field.cols) {
                         <div class="cell">
                             @if(controller.getCell(row, col)._1 == Stone.EmptyTracked) {
-                                <div id="@row-@col" class="empty-cell"></div>
+                                <div id="@row-@col" class="cell-type empty-cell"></div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.One) {
-                                <div id="@row-@col" class="number-1">@{
+                                <div id="@row-@col" class="cell-type number-1">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Two) {
-                                <div id="@row-@col" class="number-2">@{
+                                <div id="@row-@col" class="cell-type number-2">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Three) {
-                                <div id="@row-@col" class="number-3">@{
+                                <div id="@row-@col" class="cell-type number-3">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Four) {
-                                <div id="@row-@col" class="number-4">@{
+                                <div id="@row-@col" class="cell-type number-4">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Five) {
-                                <div id="@row-@col" class="number-5">@{
+                                <div id="@row-@col" class="cell-type number-5">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Six) {
-                                <div id="@row-@col" class="number-6">@{
+                                <div id="@row-@col" class="cell-type number-6">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Seven) {
-                                <div id="@row-@col" class="number-7">@{
+                                <div id="@row-@col" class="cell-type number-7">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Eight) {
-                                <div id="@row-@col" class="number-8">@{
+                                <div id="@row-@col" class="cell-type number-8">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Bomb) {
-                                <div id="@row-@col" class="bomb">@{
+                                <div id="@row-@col" class="cell-type bomb">@{
                                     "\uD83D\uDCA3"
                                 }</div>
                             }
