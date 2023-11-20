@@ -8,6 +8,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/" + gameSize + ".css")">
         <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/menubar.css")">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="@routes.Assets.versioned("javascripts/minesweeper.js")" type="text/javascript"></script>
     </head>
 
     <nav class="navbar navbar-expand-lg navbar-dark menu-bar">
@@ -40,11 +42,11 @@
 
     <body class="background">
         <div>
-            <div>
+            <div id="game">
                 <div class="flagcount-container">
                     <div class="flagcount">Flags left: @controller.flagsLeft()</div>
                 </div>
-                <div class="game-container">
+                <div id="minesweeper-grid" class="game-container">
                 @for(row <- 0 until controller.field.rows) {
                     <div class="cell-container">
                     @for(col <- 0 until controller.field.cols) {
@@ -93,17 +95,23 @@
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Bomb) {
-                                <div id="@row-@col" class="cell-type bomb">@{
+                                <div id="@row-@col" class="cell-type bomb" onclick="handleBombClick(@row, @col,
+                                        @controller.field.rows)">@{
                                     "\uD83D\uDCA3"
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.Flag) {
-                                <div id="@row-@col" class="flagged">@{
+                                <div id="@row-@col" class="flagged" onclick="handleClick(@row, @col)">@{
                                     controller.getCell(row, col)._1
                                 }</div>
                             }
                             @if(controller.getCell(row, col)._1 == Stone.NotTracked) {
-                                <button id="@row-@col" class="button" onclick="location.href = '@routes.HomeController.revealValue(row, col)'"></button>
+                                @if(controller.getCell(row, col)._2 == Stone.Bomb) {
+                                    <button id="@row-@col" class="button" onclick="handleClick(@row, @col)"></button>
+                                }
+                                @if(controller.getCell(row, col)._2 != Stone.Bomb) {
+                                    <button id="@row-@col" class="button" onclick="handleClick(@row, @col)"></button>
+                                }
                             }
                         </div>
                     }
@@ -112,6 +120,14 @@
                 </div>
 
                 <div class="clear"></div>
+            </div>
+            <div id="lostScreen" class="text-center" style="display: none;">
+                <h2 class="text-center">Try again!</h2>
+                <div class="restartButton">
+                    <button onclick="location.href = '@routes.HomeController.easy()'">Easy</button>
+                    <button onclick="location.href = '@routes.HomeController.hard()'">Hard</button>
+                    <button onclick="location.href = '@routes.HomeController.extreme()'">Extreme</button>
+                </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
