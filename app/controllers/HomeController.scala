@@ -50,12 +50,12 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
 
   def revealValue(x: Integer, y: Integer): Action[AnyContent] = Action {
     controller.doAndPublish(controller.revealValue(new Coordinates(x, y)))
-    Ok(views.html.displayGame(controller, size))
+    Ok(controller.gameToJson)
   }
 
   def setFlag(x: Integer, y: Integer): Action[AnyContent] = Action {
     controller.doAndPublish(controller.setFlag(new Coordinates(x, y)))
-    Ok(views.html.displayGame(controller, size))
+    Ok(controller.gameToJson)
   }
 
   def load(): Action[AnyContent] = Action {
@@ -74,4 +74,17 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     controller.doAndPublish(controller.save)
     Ok(views.html.displayGame(controller, size))
   }
+
+  def gameToJson: Action[AnyContent] = Action {
+    Ok(controller.gameToJson)
+  }
+
+  import play.api.libs.json.Json
+
+  def flagsLeft(): Action[AnyContent] = Action {
+    val flagsLeftValue = controller.flagsLeft()
+    val jsonResult = Json.obj("flags_left" -> flagsLeftValue)
+    Ok(jsonResult)
+  }
+
 }

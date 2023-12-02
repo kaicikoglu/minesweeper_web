@@ -1,21 +1,3 @@
-let clickCount = 0;
-let timer;
-
-function handleClick(row, col) {
-    clickCount++;
-    if (clickCount === 1) {
-        timer = setTimeout(function () {
-            window.location.href = "/game/revealValue/" + row + "/" + col;
-            clickCount = 0
-        }, 300);
-    } else if (clickCount === 2) {
-        clearTimeout(timer);
-        window.location.href = "/game/setFlag/" + row + "/" + col;
-        clickCount = 0;
-    }
-}
-
-
 function handleBombClick(row, col, gridSize) {
     propagateShockwave(row, col, gridSize);
 }
@@ -59,10 +41,10 @@ function isValidCell(row, col, gridSize) {
 
 function applyShockwaveEffect(cell, delay) {
     setTimeout(() => {
-        cell.hide(); // Hide the cell
+        cell.addClass('shockwave'); // Apply the shockwave class to trigger the animation
         setTimeout(() => {
-            cell.show();
-        }, 1000);
+            cell.removeClass('shockwave'); // Remove the shockwave class after the animation duration
+        }, 1000); // Adjust duration as needed to match the animation duration in your CSS
     }, delay);
 }
 
