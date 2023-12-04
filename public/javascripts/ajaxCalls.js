@@ -20,6 +20,16 @@ function reveal(x, y) {
     socket.send(JSON.stringify(message));
 }
 
+function sendBombClick(row, col, size) {
+    const message = {
+        command: "bomb",
+        size: size,
+        x: row,
+        y: col
+    };
+
+    socket.send(JSON.stringify(message));
+}
 
 function initialField() {
     fetch('/json')
