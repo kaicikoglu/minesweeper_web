@@ -1,5 +1,6 @@
 let clickCount = 0;
 let timer;
+const socket = new WebSocket("ws://localhost:9000/socket");
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -35,7 +36,7 @@ function handleJSONData(jsonData) {
                                 if (second === "✴") {
                                     reveal(i, j);
                                     await sleep(200);
-                                    handleBombClick(i, j, rows);
+                                    sendBombClick(i, j, rows);
                                 } else {
                                     reveal(i, j);
                                 }
@@ -126,12 +127,49 @@ function handleJSONData(jsonData) {
     }
 }
 
-$(document).ready(function () {
-    initialField();
-    getFlags();
-});
+function connectWebSockets() {
+    socket.onopen = () => {
+        console.log('WebSocket connection opened.');
+    };
 
+    socket.onmessage = (event) => {
+        const gameData = JSON.parse(event.data);
+
+        if (gameData.event === "bombClick") {
+            handleBombClick(gameData.row, gameData.col, gameData.size)
+        } else {
+            handleJSONData(gameData);
+            getFlags();
+        }
+    };
+
+    socket.onclose = () => {
+        console.log('WebSocket connection closed.');
+    };
+
+    socket.onerror = function (error) {
+        console.log('Error in Websocket Occured: ' + error);
+    };
+}
 
 function updateFlags(flags) {
     $('#flagsLeft').text("Flags Left: " + flags);
+}
+
+$(document).ready(function () {
+    initialField();
+    getFlags();
+    connectWebSockets();
+});
+
+
+function sendBombClick(row, col, size) {
+    const message = {
+        command: "bomb",
+        size: size,
+        x: row,
+        y: col
+    };
+
+    socket.send(JSON.stringify(message));
 }

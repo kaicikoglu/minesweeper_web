@@ -26,3 +26,5 @@ GET        /game/load                     controllers.HomeController.load()
 GET        /game/save                     controllers.HomeController.save()
 
 GET        /json                          controllers.HomeController.gameToJson()
+
+GET        /socket                        controllers.HomeController.socket

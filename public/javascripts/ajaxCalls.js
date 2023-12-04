@@ -1,35 +1,23 @@
 function flag(x, y) {
-    fetch(`/game/setFlag/${x}/${y}`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(jsonData => {
-            handleJSONData(jsonData);
-            getFlags();
-        })
-        .catch(error => {
-            console.error('There was a problem fetching the data:', error);
-        });
+    const message = {
+        command: "flag",
+        x: x,
+        y: y
+    };
+
+    socket.send(JSON.stringify(message));
+    getFlags();
 }
 
 
 function reveal(x, y) {
-    fetch(`/game/revealValue/${x}/${y}`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(jsonData => {
-            handleJSONData(jsonData);
-        })
-        .catch(error => {
-            console.error('There was a problem fetching the data:', error);
-        });
+    const message = {
+        command: "reveal",
+        x: x,
+        y: y
+    };
+
+    socket.send(JSON.stringify(message));
 }
 
 
