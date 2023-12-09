@@ -37,6 +37,16 @@ function initialField() {
         });
 }
 
+function sendBombClick(row, col, size) {
+    const message = {
+        command: "bomb",
+        size: size,
+        x: row,
+        y: col
+    };
+
+    socket.send(JSON.stringify(message));
+}
 
 function getFlags() {
     $.ajax({
