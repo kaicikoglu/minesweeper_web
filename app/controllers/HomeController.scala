@@ -32,21 +32,21 @@ class HomeController @Inject()(cc: ControllerComponents)(implicit system: ActorS
     GameController.resetInstance("1")
     controller = GameController.getInstance
     size = "easy"
-    Ok(views.html.displayGame(controller, size))
+    Ok(controller.gameToJson)
   }
 
   def hard(): Action[AnyContent] = Action {
     GameController.resetInstance("2")
     controller = GameController.getInstance
     size = "hard"
-    Ok(views.html.displayGame(controller, size))
+    Ok(controller.gameToJson)
   }
 
   def extreme(): Action[AnyContent] = Action {
     GameController.resetInstance("3")
     controller = GameController.getInstance
     size = "extreme"
-    Ok(views.html.displayGame(controller, size))
+    Ok(controller.gameToJson)
   }
 
   def revealValue(x: Integer, y: Integer): Action[AnyContent] = Action {
@@ -128,6 +128,12 @@ class YourWebSocketActor(out: ActorRef, homeController: HomeController) extends 
           )
           out ! jsonObj
           homeController.sendToClients(jsonObj)
+        case "initialize" =>
+          val difficulty = (msg \ "difficulty").as[String]
+          GameController.resetInstance(difficulty)
+          val initialGameJson = homeController.controller.gameToJson
+          out ! initialGameJson
+          homeController.sendToClients(initialGameJson)
       }
   }
 }
