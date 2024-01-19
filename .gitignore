@@ -8,8 +8,6 @@ target
 /.settings
 /RUNNING_PID
 
-!/target
-
 field.json
 
 /.g8
