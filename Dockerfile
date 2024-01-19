@@ -14,4 +14,4 @@ RUN sbt stage
 EXPOSE 9000
 
 # Start the Play application
-CMD ["target/universal/stage/bin/minesweeper_web", "-Dplay.http.secret.key=H_`v1?T7^PFAx7bs[0pKLSSGTRAyxH><W5Xw@Glm<BMEyUKqBmPw9qTGXBlpwjOt"]
+CMD ["target/universal/stage/bin/minesweeper_web", "-Dhttp.port=9000","-Dplay.http.secret.key=H_`v1?T7^PFAx7bs[0pKLSSGTRAyxH><W5Xw@Glm<BMEyUKqBmPw9qTGXBlpwjOt"]
