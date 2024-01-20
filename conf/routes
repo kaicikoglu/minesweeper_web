@@ -11,9 +11,9 @@ GET        /assets/*file                  controllers.Assets.versioned(path="/pu
 
 GET        /game/easy                     controllers.HomeController.easy()
 
-GET        /game/hard                     controllers.HomeController.hard()
+GET        /game/medium                   controllers.HomeController.medium()
 
-GET        /game/extreme                  controllers.HomeController.extreme()
+GET        /game/hard                     controllers.HomeController.hard()
 
 GET        /game/revealValue/:x/:y        controllers.HomeController.revealValue(x: Integer, y: Integer)
 

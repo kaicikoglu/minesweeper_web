@@ -35,17 +35,17 @@ class HomeController @Inject()(cc: ControllerComponents)(implicit system: ActorS
     Ok(controller.gameToJson)
   }
 
-  def hard(): Action[AnyContent] = Action {
+  def medium(): Action[AnyContent] = Action {
     GameController.resetInstance("2")
     controller = GameController.getInstance
-    size = "hard"
+    size = "medium"
     Ok(controller.gameToJson)
   }
 
-  def extreme(): Action[AnyContent] = Action {
+  def hard(): Action[AnyContent] = Action {
     GameController.resetInstance("3")
     controller = GameController.getInstance
-    size = "extreme"
+    size = "hard"
     Ok(controller.gameToJson)
   }
 
@@ -68,9 +68,9 @@ class HomeController @Inject()(cc: ControllerComponents)(implicit system: ActorS
     if (controller.field.rows == 8) {
       size = "easy"
     } else if (controller.field.rows == 16) {
-      size = "hard"
+      size = "medium"
     } else if (controller.field.rows == 24) {
-      size = "extreme"
+      size = "hard"
     }
     Ok(views.html.displayGame(controller, size))
   }
