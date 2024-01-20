@@ -1,67 +1,75 @@
 @import "easy.css";
 
 .button {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
 }
 
 @media (min-width: 600px) {
     .cell {
-        width: calc(6vw - 10px);
-        height: calc(6vw - 10px);
-        border-radius: 8px;
+        width: calc(4vw - 8px);
+        height: calc(4vw - 8px);
+        border-radius: 6px;
     }
 
     .cell-type {
-        width: calc(6vw - 12px);
-        height: calc(6vw - 12px);
-        font-size: calc(5vw - 10px);
-        border-radius: 7px;
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(4vw - 10px);
+        border-radius: 5px;
     }
 
-    .bomb {
-        font-size: calc(4vw - 10px);
+    .bomb{
+        font-size: calc(3vw - 10px);
+    }
+
+    .flagged{
+        font-size: calc(3vw - 10px);
     }
 }
 
 @media (max-width: 600px) {
     .cell {
-        width: calc(6vw - 10px);
-        height: calc(6vw - 10px);
-        border-radius: 8px;
+        width: calc(4vw - 8px);
+        height: calc(4vw - 8px);
+        border-radius: 6px;
     }
 
     .cell-type {
-        width: calc(6vw - 12px);
-        height: calc(6vw - 12px);
-        font-size: calc(5vw - 10px);
-        border-radius: 7px;
+        width: calc(4vw - 10px);
+        height: calc(4vw - 10px);
+        font-size: calc(4vw - 10px);
+        border-radius: 5px;
     }
 
-    .bomb {
-        font-size: calc(4vw - 10px);
+    .bomb{
+        font-size: calc(3vw - 10px);
+    }
+
+    .flagged{
+        font-size: calc(3vw - 10px);
     }
 }
 
 @media (min-width: 992px) {
     .cell {
-        width: calc(6vh - 10px);
-        height: calc(6vh - 10px);
-        border-radius: 8px;
+        width: calc(4vh - 8px);
+        height: calc(4vh - 8px);
+        border-radius: 6px;
     }
 
     .cell-type {
-        width: calc(6vh - 12px);
-        height: calc(6vh - 12px);
-        font-size: calc(5vh - 10px);
-        border-radius: 7px;
+        width: calc(4vh - 10px);
+        height: calc(4vh - 10px);
+        font-size: calc(4vh - 10px);
+        border-radius: 5px;
     }
 
-    .bomb {
-        font-size: calc(4vh - 10px);
+    .bomb{
+        font-size: calc(3vh - 10px);
     }
 
-    .flagged {
-        font-size: calc(4vh - 10px);
+    .flagged{
+        font-size: calc(3vh - 10px);
     }
 }
